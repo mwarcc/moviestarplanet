@@ -2,7 +2,7 @@ An asynchronous library for seamless interaction with MovieStarPlanet's API.
 
 
 # moviestarplanet
-This is an asynchronous library designed to facilitate seamless interaction with the MovieStarPlanet API. Please note that while this library is not yet complete, it contains all the necessary components to exploit MovieStarPlanet. If you wish to run a few requests, you may need to add a websockets implementation.
+This is an asynchronous library designed to facilitate seamless interaction with the MovieStarPlanet API. Please note that while this library is not yet complete, it contains all the necessary components to exploit MovieStarPlanet.
 
 # How to initialize the class
 To begin using the MovieStarPlanet library, first, import the MovieStarPlanetAsync class and initialize it:
@@ -33,22 +33,6 @@ async def main() -> None:
 
 asyncio.run(main())
 ```
-
-### here is the current list of all the functions:
-`login_async(username, password, server, proxy=None)`
-Login to MovieStarPlanet.
-
-`claim_reward_async(award_type, proxy=None)`
-Claim a reward.
-
-`block_user_async(actorId, proxy=None)`
-Block a user.
-
-`get_piggy_bank_async(proxy=None)`
-Retrieve piggy bank informations.
-
-`search_actor_by_name_async(name, proxy=None)`
-Retrieve a list of all the actors found.
 
 # SoftUtils & BotUtils
 The library also have cool things that can help you botting and doing soft rare on MovieStarPlanet2.
