@@ -257,7 +257,7 @@ class MovieStarPlanetAsync:
         return AwardData(**response.content.get("Data")) if response.status_code == 200 and response.content.get("Data") else AwardData()
     
     @requires_login
-    async def block_user_async(self, actorId: int, proxy: Optional[int]=None) -> bool:
+    async def block_user_async(self, actorId: int, proxy: Optional[str]=None) -> bool:
         """
         Asynchronously blocks a user.
 
@@ -274,7 +274,7 @@ class MovieStarPlanetAsync:
         return True if response.status_code == 200 and response.content == 0 else False
     
     @requires_login
-    async def get_piggy_bank_async(self, proxy: Optional[int]=None) -> PiggyBank:
+    async def get_piggy_bank_async(self, proxy: Optional[str]=None) -> PiggyBank:
         """
         Asynchronously retrieves information about the user's piggy bank.
 
@@ -290,7 +290,7 @@ class MovieStarPlanetAsync:
         return PiggyBank(**response.content.get("Data")) if response.status_code == 200 and response.content.get("Data") else PiggyBank()
     
     @requires_login
-    async def search_actor_by_name_async(self, name: str, proxy: Optional[int]=None) -> List['SearchActor']:
+    async def search_actor_by_name_async(self, name: str, proxy: Optional[str]=None) -> List['SearchActor']:
         """
         Asynchronously searches for actors by name.
 
@@ -312,7 +312,7 @@ class MovieStarPlanetAsync:
  
     
     @requires_login
-    async def recycle_item_async(self, item_rel_id: int = 0, actor_click_item: int = 0, proxy: Optional[int] = None) -> bool:
+    async def recycle_item_async(self, item_rel_id: int = 0, actor_click_item: int = 0, proxy: Optional[str] = None) -> bool:
         """
         Recycles an item asynchronously.
 
@@ -330,7 +330,7 @@ class MovieStarPlanetAsync:
         return True if response.status_code == 200 and int(response.content) > 0 else False
     
     @requires_login
-    async def send_autograph_async(self, actorId: int, proxy: Optional[int] = None) -> Autograph:
+    async def send_autograph_async(self, actorId: int, proxy: Optional[str] = None) -> Autograph:
         """
         Sends an autograph to the specified actor asynchronously.
 
@@ -347,7 +347,7 @@ class MovieStarPlanetAsync:
         return Autograph(**response.content) if response.status_code == 200 else Autograph()
     
     @requires_login
-    async def create_snapshot_small_and_big_mobile_async(self, image_data_small: amf3.ByteArray, image_data_big: amf3.ByteArray, proxy: Optional[int] = None) -> bool:
+    async def create_snapshot_small_and_big_mobile_async(self, image_data_small: amf3.ByteArray, image_data_big: amf3.ByteArray, proxy: Optional[str] = None) -> bool:
         """
         Creates a profile snapshot with both small and big images asynchronously for mobile devices.
 
